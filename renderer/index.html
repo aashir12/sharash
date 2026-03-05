@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShareMouse Clone (Personal)</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand__title">ShareMouse Clone</div>
+          <div class="brand__subtitle">LAN mouse/keyboard sharing</div>
+        </div>
+        <div class="status">
+          <div class="pill" id="pillMode">Mode: -</div>
+          <div class="pill" id="pillConn">Status: -</div>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="panel">
+          <h2>Host</h2>
+          <div class="row">
+            <label class="label">
+              Port
+              <input id="hostPort" class="input" type="number" min="1" max="65535" value="41500" />
+            </label>
+            <button id="btnStartHost" class="btn btn--primary">Start Host</button>
+            <button id="btnStopHost" class="btn btn--ghost">Stop</button>
+          </div>
+
+          <div class="toggles">
+            <label class="toggle">
+              <input id="toggleMouse" type="checkbox" checked />
+              <span>Enable mouse sharing</span>
+            </label>
+            <label class="toggle">
+              <input id="toggleKeyboard" type="checkbox" checked />
+              <span>Enable keyboard sharing</span>
+            </label>
+          </div>
+
+          <div class="note" id="nativeNote"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Client</h2>
+          <div class="row">
+            <label class="label grow">
+              Host IP
+              <input id="hostIp" class="input" placeholder="192.168.1.50" />
+            </label>
+            <label class="label">
+              Port
+              <input id="clientPort" class="input" type="number" min="1" max="65535" value="41500" />
+            </label>
+            <button id="btnConnect" class="btn btn--primary">Connect</button>
+            <button id="btnDisconnect" class="btn btn--ghost">Disconnect</button>
+          </div>
+          <div class="help">
+            Run one instance as <b>HOST</b>. On other machines run as <b>CLIENT</b> and connect using the host's LAN IP.
+          </div>
+        </section>
+
+        <section class="panel span2">
+          <div class="panelHead">
+            <h2>Connected devices</h2>
+            <div class="subtle">Active target is highlighted</div>
+          </div>
+          <div id="devices" class="devices"></div>
+        </section>
+
+        <section class="panel span2">
+          <div class="panelHead">
+            <h2>Screen layout</h2>
+            <div class="subtle">Drag devices onto grid cells</div>
+          </div>
+          <div class="layoutWrap">
+            <div class="layout" id="layoutGrid" aria-label="Layout grid"></div>
+            <div class="layoutLegend">
+              <div class="legendItem"><span class="dot dot--host"></span> HOST</div>
+              <div class="legendItem"><span class="dot dot--client"></span> CLIENT</div>
+              <div class="legendItem"><span class="dot dot--active"></span> ACTIVE</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel span2">
+          <div class="panelHead">
+            <h2>Logs</h2>
+            <button id="btnClearLogs" class="btn btn--tiny btn--ghost">Clear</button>
+          </div>
+          <div id="logs" class="logs"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+

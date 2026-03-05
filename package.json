@@ -1,0 +1,24 @@
+{
+  "name": "sharemouse-clone",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal ShareMouse-like LAN mouse/keyboard sharing (Electron + WebSocket).",
+  "main": "main.js",
+  "author": "personal-use",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron ."
+  },
+  "dependencies": {
+    "uuid": "^11.1.0",
+    "ws": "^8.18.3"
+  },
+  "optionalDependencies": {
+    "@nut-tree/nut-js": "^4.2.0",
+    "iohook": "^0.9.3"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0"
+  }
+}
