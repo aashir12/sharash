@@ -9,6 +9,7 @@ const { createInputCapture } = require("./input/capture");
 const { createInputSimulator } = require("./input/simulate");
 const { LayoutManager } = require("./layout/layout-manager");
 
+// Host Id
 const HOST_ID = "HOST";
 const DEFAULT_PORT = 41500;
 
