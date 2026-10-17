@@ -13,6 +13,7 @@ const { LayoutManager } = require("./layout/layout-manager");
 const HOST_ID = "HOST";
 const DEFAULT_PORT = 41500;
 
+// clamp function
 function clamp(n, min, max) {
   return Math.max(min, Math.min(max, n));
 }
