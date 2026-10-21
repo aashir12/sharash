@@ -1,6 +1,6 @@
 # sharemouse-clone (personal)
 
-Electron desktop app that lets **one HOST** computer share mouse/keyboard control with up to **5 CLIENT** computers on the same LAN using **WebSockets**.
+Electron desktop app that lets **one HOST** computer share " mouse/keyboard " control with up to **5 CLIENT** computers on the same LAN using **WebSockets**.
 
 This project is designed to be runnable even if native input modules fail to install:
 
