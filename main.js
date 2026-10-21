@@ -51,8 +51,8 @@ class AppController {
     this.client = null;
 
     this.capture = null;
-    this.simulator = null; // used by client to simulate input
-    this.hostWarp = null; // optional: warp host pointer while controlling remote
+    this.simulator = null; // used by client to simulate inputs
+    this.hostWarp = null; // optional: warp hosts pointer while controlling remote
 
     this.sharing = { mouse: true, keyboard: true };
     this.devices = [
